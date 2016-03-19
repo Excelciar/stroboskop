@@ -34,12 +34,12 @@ window.addEventListener('load', function() {
 	
 	var stop = function(event) {
 		ustavi = true;
-	
 		
- 		
  		start.removeEventListener('click', stop);
  		start.innerHTML = "Zaženi stroboskop";
  		start.addEventListener('click', zagon);
+ 		
+ 		
 	}
 	
 	var zagon = function(event) {
@@ -50,8 +50,8 @@ window.addEventListener('load', function() {
 			vrednosti.push(barva.innerHTML);
 		}
 		
-		minCas = 1000;
-		maxCas = 1000;
+		minCas = parseInt(document.querySelector("#min").value);
+		maxCas = parseInt(document.querySelector("#max").value);
 		spremeniBarvo(0);
 		
 		var start = document.querySelector("#start");
